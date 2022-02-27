@@ -45,23 +45,23 @@
           <hr>
           <ul class="list-group">
                       <li class="list-group-item">
-                        <h6 class="mb-0">Empid:</h6>
+                        <h6 class="mb-0"><i class="fa-regular fa-id-card"></i>&emsp;Empid:</h6>
                         <span class="text-secondary"><?=$data['empid']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Login_id:</h6>
+                        <h6 class="mb-0"><i class="bi bi-key-fill"></i>&emsp;Login_id:</h6>
                         <span class="text-secondary"><?=$data['login_id']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Company Name:</h6>
+                        <h6 class="mb-0"><i class="bi bi-building"></i>&emsp;Company Name:</h6>
                         <span class="text-secondary"><?=$data['name']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Email address:</h6>
+                        <h6 class="mb-0"><i class="bi bi-envelope-fill"></i>&emsp;Email address:</h6>
                         <span class="text-secondary"><?=$data['email']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Sign Up date:</h6>
+                        <h6 class="mb-0"><i class="bi bi-calendar-check-fill"></i>&emsp;Sign Up date:</h6>
                         <span class="text-secondary"><?=$data['date']?></span>
                       </li>
           </ul>

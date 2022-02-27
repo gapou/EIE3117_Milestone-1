@@ -162,7 +162,7 @@
            
         
 
-           echo "<script>alert('Add Job')</script>";
+           echo "<script>alert('Job Posted')</script>";
            
 
         }

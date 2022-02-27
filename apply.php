@@ -47,37 +47,41 @@
              
              <ul class="list-group">
                       <li class="list-group-item">
-                        <h6 class="mb-0">Job ID:</h6>
+                        <h6 class="mb-0"><i class="fa-regular fa-id-card"></i>&emsp;Job ID:</h6>
                         <span class="text-secondary"><?=$data['jobid']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Job Title:</h6>
+                        <h6 class="mb-0"><i class="bi bi-person-fill"></i>&emsp;Job Title:</h6>
                         <span class="text-secondary"><?=$data['title']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Job Requirement:</h6>
+                        <h6 class="mb-0"><i class="bi bi-gear-fill"></i>&emsp;Job Requirement:</h6>
                         <span class="text-secondary"><?=$data['requirement']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Job Duty:</h6>
+                        <h6 class="mb-0"><i class="bi bi-briefcase-fill"></i>&emsp;Job Duty:</h6>
                         <span class="text-secondary"><?=$data['duty']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Job Salary:</h6>
+                        <h6 class="mb-0"><i class="bi bi-coin"></i>&emsp;Job Salary:</h6>
                         <span class="text-secondary"><?=$data['salary']?></span>
                       </li>
                       <li class="list-group-item">
-                        <h6 class="mb-0">Job Description:</h6>
+                        <h6 class="mb-0"><i class="bi bi-card-list"></i>&emsp;Job Description:</h6>
                         <span class="text-secondary"><?=$data['description']?></span>
                       </li>
           </ul>
-
+          <div class="apply-group">
+                  <div class="form-group apply-textarea">
+                    <label class="form-label">Apply Message:</label>
+                    <input type="text" placeholder="enter your message here" name="message" class="form-control">
+                    </div>
               <div class="form-group">
               
               </div>
               
               <input type="submit"  name="applyjob" value="Apply" class="btn btn-primary">
-
+              </div>
            </form>
         
 
@@ -102,12 +106,14 @@
 
             $userid = $_POST['userid'];
             $jobid = $_POST['jobid'];
+            $message = $_POST['message'];
             $date = date('Y-m-d H:i:s');
             
 
 
 
-           $sql = "INSERT INTO `application`(`userid`, `jobid`,  `date`) VALUES ('$userid','$jobid','$date')";
+           $sql = "INSERT INTO `application`(`userid`, `jobid`, `message`, `date`) 
+                  VALUES ('$userid','$jobid','$message','$date')";
            mysqli_query($con,$sql);
            
         

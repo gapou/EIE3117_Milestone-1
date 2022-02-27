@@ -1,8 +1,10 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 html, body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     background-color: #ffffff;
-    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    background-image: url("../images/bgimg1.jpg");
 
 height: 100vh;
 }
@@ -28,6 +30,13 @@ h1,h2,h3,h4,h5,h6 {
   }
   hr {
     border-top: 1px solid #aaa9a9;
+  }
+  tbody tr:hover{
+    background: #86c2cc;
+
+    color: #ffffff;
+    transition: .5s;
+
   }
 .container {
     width: 80vw;
@@ -119,10 +128,16 @@ h1,h2,h3,h4,h5,h6 {
     margin-top: 5vh;
     border-radius: 16px;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
-    background-color: rgba(255, 255, 255, .15);
-    backdrop-filter: blur(50px);
+
+    background: linear-gradient(330deg, rgba(255, 255, 255, .15)  50%, #91e9c767 50%) right;
+    background-size: 230%;
+    transition: .5s ease-out;
+
+    backdrop-filter: blur(5px);
 }.job-from:nth-last-child(1){
   margin-bottom: 18vh;
+}.job-from:hover{
+    background-position: -40vw;
 }
 .view-app{
     padding: 20px;
@@ -163,4 +178,13 @@ width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.apply-group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.apply-textarea{
+  width: 40vw;
 }

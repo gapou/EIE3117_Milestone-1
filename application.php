@@ -46,7 +46,7 @@
                                  <th>ID</th>
                                  <th>Job</th>
                                  <th>User</th>
-                                 
+                                 <th>Message</th>
                                  <th>Date</th>
                             </tr>
                       </thead>
@@ -54,7 +54,7 @@
                       <tbody id="mytable">
                            <?php
                               
-                              $sql = "select application.appid, user.name , jobs.title, employer.empid,  application.date
+                              $sql = "select application.appid, application.message, user.name , jobs.title, employer.empid,  application.date
                               from application
                               INNER join jobs on jobs.jobid = application.jobid
                               INNER join employer on employer.empid = jobs.empid
@@ -68,7 +68,7 @@
                                       <td><?=$data['appid']?></td>
                                       <td><?=$data['title']?></td>
                                       <td><?=$data['name']?></td>
-                                      
+                                      <td><?=$data['message']?></td>
                                       <td><?=$data['date']?></td>
                                      
                                 </tr>

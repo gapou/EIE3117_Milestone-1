@@ -18,7 +18,7 @@
           <div class="container">
                <div class="row">
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
-                         <div class="home-info">
+                         <div class="home-info" data-aos="zoom-in-down" data-aos-duration="1500">
                               <h3>professional job hunting page</h3>
                               <h1>We help you manage your career successfully!</h1>
                          </div>
