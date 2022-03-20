@@ -23,9 +23,6 @@
 
     <div class="container">
 
-    
-      
-
 
     <div class="single login">
            
@@ -35,11 +32,14 @@
                 <form action="login.php" method="post">
                     <div class="form-group">
                     <label class="form-label">Login ID</label>
-                    <input type="text" placeholder="enter a login ID" name="login_id" class="form-control">
+                    <input type="text" placeholder="enter a login ID" name="login_id" class="form-control" value="<?php if(isset($_COOKIE['login_id'])) echo $_COOKIE['login_id'];?>">
                     </div>
                     <div class="form-group">
                     <label class="form-label">Password</label>
-                    <input type="password" placeholder="enter a password" name="password" class="form-control">
+                    <input type="password" placeholder="enter a password" name="password" class="form-control" value="<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password'];?>">
+                    </div>
+                    <div>
+                    <p><input type="checkbox" name="remember" value="1"> Remember me</p>
                     </div>
                     <input type="submit"  name="loginr" value="Login" class="btn btn-primary">
                     <br><br>
@@ -62,8 +62,15 @@
            if(isset($_POST['logine']))
            {
 
+
             $login_id = $_POST['login_id'];
             $password = $_POST['password'];
+            $remember = $_POST['remember'];
+            if($remember == 1){
+                setcookie('login_id',$login_id,time()+60*60*7,"/");
+                setcookie('password',$password,time()+60*60*7,"/");
+            }
+
 
             $sql = "select empid,name,login_id,password,type from employer where login_id = '$login_id' and password = '$password' 
 
@@ -112,7 +119,11 @@
 
             $login_id = $_POST['login_id'];
             $password = $_POST['password'];
-
+            $remember = $_POST['remember'];
+            if($remember == 1){
+                setcookie('login_id',$login_id,time()+60*60*7,"/");
+                setcookie('password',$password,time()+60*60*7,"/");
+            }
             $sql = "select userid,name,login_id,password,type from user where login_id = '$login_id' and password = '$password' 
 
             ";

@@ -65,7 +65,7 @@
                    </div>
 
                    <div class="form-group">
-                   <label class="form-label">Job salary</label>
+                   <label class="form-label">Job Salary</label>
                    <input type="text" placeholder="Enter a Job salary" name="salary" class="form-control">
                    </div>
 
@@ -93,7 +93,7 @@
                                  <th>ID</th>
                                  <th>Title</th>
                                  <th>Requirement</th>
-                                 <th>duty</th>
+                                 <th>Duty</th>
                                  <th>Salary</th>
                                  <th>Description</th>
                                  <th>Campany</th>
